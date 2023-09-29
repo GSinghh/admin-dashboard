@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Open+Sans:wght@300&family=Source+Code+Pro&display=swap');
 
 :root{
-    --background-color: rgba(246, 247, 251, 0.165);
-    --light-text: rgb(170, 173, 188);
-    --dark-text: rgb(65,69,81);
+    --background-color: rgb(246 247 251);;
+    --light-text: rgb(179, 179, 179);
+    --dark-text: rgba(97, 96, 96, 0.435);
     --hover-link: rgb(45, 109, 212);
 }
 
@@ -17,6 +17,7 @@
 body
 {
     font-family: 'Comfortaa', cursive;
+    background-color: var(--background-color);
 }
 .container
 {
@@ -29,6 +30,7 @@ body
     background-color: rgb(26, 26, 33);
     height: 100vh;
     padding: 30px;
+    grid-row: 1 / -1;
 }
 .sidebar-logo
 {
@@ -44,7 +46,7 @@ body
 .sidebar-nav a 
 {
     text-decoration: none;
-    color: var(--dark-text);
+    color: var(--light-text);
     display: block;
     font-size: 20px;
     margin: 20px 0;
@@ -61,7 +63,7 @@ body
 }
 .navbar-container
 {
-    border: 2px solid lightgray;
+    border: 2px solid rgba(211, 211, 211, 0.743);
     padding: 20px;
     border-radius: 10px;
     background-color: white;
@@ -73,7 +75,7 @@ body
 .navbar-container a
 {
     text-decoration: none;
-    color: var(--dark-text);
+    color: black;
 
 }
 .navbar-container a:hover
@@ -90,7 +92,7 @@ body
 {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
     color: var(--dark-text);
 }
 .navbar-links-right img
@@ -109,4 +111,49 @@ body
     background-color: var(--dark-text);
     width: 1px;
     height: 100%;
+}
+.main-content
+{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-column: 2 / -1;
+    padding: 25px;
+}
+.projects
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* border: 1px solid black; */
+    grid-auto-rows: max-content;
+    gap: 10px;
+    padding: 10px;
+}
+.projects-title
+{
+    grid-column: 1 / -1;
+    text-align: left;
+    font-size: 20px;
+    font-weight: bolder;
+}
+.project-card
+{
+    border: 2px solid rgba(211, 211, 211, 0.743);
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+}
+.announcements
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    /* border: 1px solid black; */
+    padding: 10px;
+}
+.announcements-title
+{
+    grid-column: 1 / -1;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 500;
 }
